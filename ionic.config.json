@@ -1,5 +1,7 @@
 {
   "name": "SocialVideoApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

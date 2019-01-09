@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Filters</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label><b>Version Range:</b></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col text-center justify-content-center>
+        <ion-label>To</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Category</ion-label>
+          <ion-select value="Category1 " okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="Category1">Category1</ion-select-option>
+            <ion-select-option value="Category2">Category2</ion-select-option>
+            <ion-select-option value="Category3">Category3</ion-select-option>
+            <ion-select-option value="Category4">Category4</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>SubCategory</ion-label>
+          <ion-select value="SubCategory1 " okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="SubCategory1">SubCategory1</ion-select-option>
+            <ion-select-option value="SubCategory2">SubCategory2</ion-select-option>
+            <ion-select-option value="SubCategory3">SubCategory3</ion-select-option>
+            <ion-select-option value="SubCategory4">SubCategory4</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Tags</ion-label>
+          <ion-select multiple="true" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="Tag1">Tag1</ion-select-option>
+            <ion-select-option value="Tag2">Tag2</ion-select-option>
+            <ion-select-option value="Tag3">Tag3</ion-select-option>
+            <ion-select-option value="Tag4">Tag4</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Type</ion-label>
+          <ion-select value="Type1 " okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="Type1">Type1</ion-select-option>
+            <ion-select-option value="Type2">Type2</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary" text-center>
+    Search
+  </ion-toolbar>
+</ion-footer>

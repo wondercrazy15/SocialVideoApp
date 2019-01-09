@@ -1,12 +1,59 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-toolbar color="primary">
+
+    <ion-searchbar class="search_style" mode="ios" animated slot="start"></ion-searchbar>
+
+    <ion-avatar slot="end">
+      <img src="./assets/icon/profilelogo.png" style="height: 50px;margin-top: 10%;" (click)="moveToprofile()">
+    </ion-avatar>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://beta.ionicframework.com/docs/">docs</a> will be your guide.</p>
+<ion-content>
+
+  <ion-grid style="background-color:red">
+    <ion-row>
+      <ion-col>
+        <ion-label (click)="moveTofilter()" float-left padding>
+          Filter <ion-icon name="arrow-dropdown"></ion-icon>
+        </ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label float-right padding>
+          Sort <ion-icon name="arrow-dropup"></ion-icon>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="./assets/icon/profilelogo.png">
+      </ion-thumbnail>
+      <h2>My Neighbor Totoro</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
+<ion-toolbar position="bottom" color="dark" style="opacity:0.5;">
+  <ion-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <ion-icon name="home"></ion-icon>
+        </ion-col>
+        <ion-col text-center>
+          <ion-icon name="add" (click)="videoOptions()"></ion-icon>
+        </ion-col>
+        <ion-col text-center>
+          <ion-icon name="pulse" (click)="moveTOactivity()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-title>
+</ion-toolbar>

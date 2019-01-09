@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { ActionSheetController, LoadingController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -11,17 +15,22 @@ export class HomePage implements OnInit {
     public mediaCapture: MediaCapture,
     public camera: Camera,
     public actionSheetController: ActionSheetController,
-    public loadingController:LoadingController) {
-  //  this.statusBar.styleDefault();
-  this.loadingController.dismiss();
+    public loadingController: LoadingController) {
+    //  this.statusBar.styleDefault();
   }
   ngOnInit() {
+    this.loadingController.dismiss();
+
   }
   moveToprofile() {
-    this.router.navigateByUrl("/profile");
+    this.router.navigate(["/profile"]);
   }
   moveTofilter() {
-    this.router.navigateByUrl("/filter");
+    this.router.navigate(["/filter"]);
+
+  }
+  moveTOactivity(){
+    this.router.navigate(["/activity"]);
 
   }
 
@@ -72,10 +81,10 @@ export class HomePage implements OnInit {
         }
       }, {
         text: 'Cancel',
-     //   icon: 'close',
+        //   icon: 'close',
         role: 'cancel',
         handler: () => {
-      
+
         }
       }]
     });
@@ -84,5 +93,5 @@ export class HomePage implements OnInit {
 
 
 
- 
+
 }
